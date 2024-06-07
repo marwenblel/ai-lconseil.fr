@@ -1,0 +1,6 @@
+name = Luvumbo Hr Consultant
+description = Implements specifics back-end functionnalities related to Hr Consultant role.
+package = Custom
+version = VERSION
+core = 7.x
+files[] = luvumbo_hr_consultant.module

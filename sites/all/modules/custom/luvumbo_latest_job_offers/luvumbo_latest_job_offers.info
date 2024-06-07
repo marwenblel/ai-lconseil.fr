@@ -1,0 +1,6 @@
+name = Luvumbo Latest Job Offers
+description = Implements a block that display latest job offers for anonymous role.
+package = Custom
+version = VERSION
+core = 7.x
+files[] = luvumbo_latest_job_offers.module

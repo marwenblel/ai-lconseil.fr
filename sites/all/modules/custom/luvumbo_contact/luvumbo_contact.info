@@ -1,0 +1,6 @@
+name = Luvumbo Contact
+description = Implements contact block for Luvumbo website.
+package = Custom
+version = VERSION
+core = 7.x
+files[] = luvumbo_contact.module

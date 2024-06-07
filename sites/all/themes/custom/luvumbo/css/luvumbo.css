@@ -1,0 +1,284 @@
+/*h1, h2,h3,h4,h5,h6,ul,li,a,span,div,body {
+    /*font-family: Gilroy,MontHeavy;*/
+    /*font-family: 'DM Serif Display', sans-serif;*/
+ /*   font-family: 'Cirka Regular__subset', Cirka Regular, Times New Roman, Georgia, serif;
+    font-size: 20px!important;
+}*/
+body.front #block-system-main {
+display:none;
+}
+#page-wrapper {
+    margin-top: 10px;
+}
+
+
+  body.page-join-us .view-search-job .view-content table {
+    border-spacing: 30px;
+	border: 4px solid white;
+  }
+  
+  
+  body.page-join-us .view-search-job .view-content table tr td {
+	  /*min-height:600px;
+	  padding:5px;*/
+	  
+	  height:450px;
+	  width:300px;
+	  padding:5px;
+	  margin-left:5px;
+	  background-color:#eef9ff;
+	    padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  border: 4px solid white;
+  }
+  body.page-join-us .view-search-job form#views-exposed-form-search-job-page .views-exposed-form #edit-keywords-wrapper #edit-keywords {
+      width:255px;
+}
+@media only screen and (min-width: 850px) and (max-width: 1000px)  {
+  body.page-join-us .view-search-job .view-content table tr td {
+	  width:350px;
+  }
+}
+@media only screen and (min-width: 1000px)  {
+  body.page-join-us .view-search-job .view-content table tr td {
+	  width:400px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 850px) {
+  body.page-join-us .view-search-job .view-content table tr td {
+	  width:250px;
+	  
+  }
+}
+@media only screen and (max-width: 700px) {
+  body.page-join-us .view-search-job .view-content table tr td {
+	  display:flex;
+	  margin-top:10px;
+	  width:400px
+	  
+  }
+}
+
+body.page-join-us .view-search-job .view-filters {
+   padding: 30px;
+}
+
+body.page-join-us .view-search-job tr td .content {
+	padding:5px;
+    background-color: #eef9ff;
+}
+body.page-join-us .view-search-job tr td .content .views-field-field-screenshot img {
+	width:100%;
+}
+body.page-join-us .view-search-job tr td .content .views-field-title {
+    padding: 10px;
+}
+body.page-join-us .view-search-job tr td .content .views-field-title h4 a {
+    font-weight: 700 !important;
+    font-size: calc(1.275rem + .3vw);
+    font-family: "Nunito",sans-serif;
+    color: #091E3E;
+    line-height: 1.2;
+}
+body.page-join-us .view-search-job tr td .content .views-field-field-job-domain {
+  position: relative;
+  top: -250px;left:10px;
+}
+body.page-join-us .view-search-job tr td .content .views-field-field-job-domain span {
+    z-index: 0;
+    background-color: #06A3DA !important;
+    opacity: 1;
+    color: #fff;
+	padding:3px;
+
+
+}
+body.page-join-us .view-search-job tr td .content .views-field-field-job-details {
+    padding: 10px;
+}
+
+
+
+body.node-type-job-offer #topbar-start,
+body.node-type-job-offer #navbar-carousel {
+    z-index: 0!important;
+
+}
+body.node-type-job-offer #overlay {
+    z-index: 10000000!important;
+}
+body.node-type-job-offer #overlay {
+    z-index: 10000000!important;
+}
+.page-node-add-job-post #overlay #page-title {
+    display: none;
+
+}
+.page-node-add-job-post #overlay #overlay-title {
+    display: none;
+}
+.page-node-add-job-post #overlay div.form-item-title input {
+    margin-left: 25px;
+
+}
+body.not-logged-in #overlay #job-post-node-form .form-item-title input {
+	margin-left:0px;
+}
+body.not-logged-in #overlay #job-post-node-form .form-item-title label,
+body.not-logged-in #overlay #job-post-node-form .field-name-field-first-name label,
+body.not-logged-in #overlay #job-post-node-form .field-name-field-last-name label {
+  display:block;
+}
+
+body.not-logged-in.page-node-add-job-post-0 #job-post-node-form  {
+  padding:10px;
+}
+body.not-logged-in.page-node-add-job-post-0 #page-title {
+  display:none;
+}
+body.not-logged-in.page-node-add-job-post-0 #job-post-node-form .form-item-title label,
+body.not-logged-in.page-node-add-job-post-0 #job-post-node-form .field-name-field-first-name label,
+body.not-logged-in.page-node-add-job-post-0 #job-post-node-form .field-name-field-last-name label {
+  display:block;
+}
+
+
+#breadcrumb {
+    padding-left: 25px;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    color: #06a3da;
+    /*color: rgba(0, 0, 0, 0.3);*/
+    text-transform: uppercase;
+    font-family: GothamMedium;
+}
+#breadcrumb span {
+    position: relative;
+    font-size: 14px;
+    z-index: -20;
+}
+.node-type-job-offer #page-wrapper {
+    width: 90%;
+}
+.node-type-job-offer #page-wrapper div.field-name-field-post-link {
+    margin-top: 10px;
+
+}
+.node-type-job-offer #page-wrapper div.field-name-field-post-link div.field-item a {
+    font-size: 16px;
+    padding: 15px 30px;
+    -moz-box-align: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    letter-spacing: 0.5px;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    font-family: MontHeavy;
+    background: linear-gradient(#0da6dc 0%, #0da6dc 100%) no-repeat;
+    cursor: pointer;
+}
+.node-type-job-offer h1#page-title {
+    padding-left: 20px;
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-family: MontHeavy;
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 50px;
+    color: rgb(57, 65, 72);
+    text-align: left;
+    position: relative;
+    white-space: break-spaces;
+    z-index: -20;
+}
+.node-type-job-offer div.node-job-offer div.submitted {
+    width: 100%;
+    border-radius: 30px;
+    margin: 30px 30px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    box-sizing: border-box;
+
+
+}
+.node-type-job-offer div.node-job-offer div.content {
+    width: 100%;
+    border-radius: 30px;
+    margin: 30px 30px;
+    padding: 30px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    box-sizing: border-box;
+
+
+}
+.node-type-job-offer div.node-job-offer div.content div.field-name-field-job-domain .field-items .field-item {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease 0s;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: #06a3da;
+    font-family: GothamBold;
+    cursor: auto;
+    padding: 10px 15px;
+    box-shadow: none;
+}
+.node-type-job-offer div.node-job-offer div.content div.field-name-field-job-domain .field-items .field-item a {
+    color:#ffffff;
+}
+
+.node-type-job-offer div.node-job-offer div.content  div.field-name-field-profile .field-items .field-item,
+.node-type-job-offer div.node-job-offer div.content  div.field-name-field-missions .field-items .field-item,
+.node-type-job-offer div.node-job-offer div.content  div.field-name-field-requirements .field-items .field-item
+{
+    display: block;
+    margin-bottom: 12px;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 0px 20px;
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease 0s;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+    font-family: GothamBold;
+    cursor: auto;
+}
+
+section#join-us .slideInUp {
+	min-height:600px;
+}
+section#join-us .slideInUp .blog-item {
+	min-height:600px;
+}
+
+
+/**css for webmaster***/
+body.page-admin-appearance li:first-child,
+body.page-admin-appearance li:nth-child(3),
+body.page-admin-appearance li:nth-child(4) {
+  display:none!important;
+}
+
+
+div#topbar-start small {
+	font-size:13px;
+}
+
+
+
+body.not-logged-in form#user-login {	
+width: 500px;
+margin-left: auto;
+margin-right: auto;
+}

@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Main file, which implements main functionalities for Luvumbo job offer module .
+ *
+ * @ingroup luvumbo job offer
+ */
+
+/**
+ * Implements hook_node_presave().
+ * @param $node
+ * Attach newly added (job offer) nodes to all parents of selected (domain) term on job offer form;
+ * Drupal 7 code, usually attach nodes with term reference fields on the selected terms and not its parents.
+ */
+function luvumbo_job_offer_node_presave($node) {
+    if($node->type == 'job_offer') {
+        $terms = array();
+        if(isset($node->field_job_domain['und'])) {
+            foreach($node->field_job_domain['und'] as $key => $value) {
+                $parents_terms[$value['tid']] = taxonomy_get_parents_all($value['tid']);
+                $terms[] = $value['tid'];
+                foreach(taxonomy_get_parents_all($value['tid']) as $key1 => $value1) {
+                    $terms[] = $value1->tid;
+                }
+            }
+        }
+
+        $terms = array_unique($terms);
+        $i=0;
+        foreach($terms as $key2 => $value2) {
+            $node->field_job_domain['und'][$i]['tid'] = $value2;
+            $i++;
+        }
+    }
+}

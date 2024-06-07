@@ -1,0 +1,120 @@
+<?php
+/**
+ * @param $page
+ *
+ * Implements hook_page_alter().
+ */
+function luvumbo_hr_consultant_page_alter(&$page) {
+    global $user;
+
+    if (in_array('hr consultant', $user->roles)) {
+        if (isset($page['page_top']['toolbar'])) {
+            $page['page_top']['toolbar']['#pre_render'][] = '_toolbar_hr_consultant_pre_render';
+        }
+    }
+}
+
+/**
+ * @param $toolbar
+ * @return mixed
+ *
+ * Implements _toolbar_hr_consultant_pre_render function.
+ */
+function _toolbar_hr_consultant_pre_render($toolbar) {
+    global $user;
+
+
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t('Gérer les entreprises'),
+        'href'  => 'webmaster/company/manage');
+
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t("Gérer les offres d'emploi"),
+        'href'  => 'webmaster/job/manage');
+
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t("Gérer les domaines d'emploi"),
+        'href'  => 'webmaster/domain/manage');
+		
+		
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t('Gérer les candidatures'),
+        'href'  => 'webmaster/cv');
+
+
+    return $toolbar;
+}
+
+/**
+ * Implements luvumbo_hr_consultant_url_inbound_alter().
+ * DO1: redirect webmaster/company/manage/add path to admin/structure/taxonomy/company/add path.
+ **/
+function luvumbo_hr_consultant_url_inbound_alter(&$path, $original_path, $path_language) {
+    global $user;
+
+    if (in_array('hr consultant', $user->roles)) {
+        if ($path == 'webmaster/company/manage/add') {
+            $path = 'admin/structure/taxonomy/company/add';
+        }
+        if($path == 'admin/structure/taxonomy/company' OR
+            $path == 'admin/structure/taxonomy/company/edit') {
+            $path = '403';
+        }
+    }
+}
+
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
+function luvumbo_hr_consultant_form_alter(&$form, &$form_state, $form_id) {
+    global $user;
+    if (in_array("hr consultant", $user->roles)) {
+        if($form_id == "taxonomy_form_term" AND $form['#vocabulary']->machine_name == "company") {
+            if ($_GET['q'] == "admin/structure/taxonomy/company/add" )  {
+                $form['relations']['parent']['#disabled'] = TRUE;
+            } elseif((substr($_GET['q'], 0, 14 ) === "taxonomy/term/") OR (substr($_GET['q'], -4) === "edit") ) {
+                $form['relations']['parent']['#disabled'] = TRUE;
+            }
+        }
+    }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ **/
+function luvumbo_hr_consultant_form_taxonomy_form_term_alter(&$form,  &$form_state, $form_id) {
+    // Check for tags bundle.
+    if(isset($form['#bundle']) AND $form['#bundle'] == 'domain') {
+        // Apply custom validator.
+        $form['#validate'][] = '_mymodule_custom_term_validator';
+    }
+}
+
+/**
+ * My custom validator for tags.
+ **/
+function _mymodule_custom_term_validator($form, &$form_state) {
+    $validate = TRUE;
+    $parents = $form_state['values']['parent'];
+
+
+    $array_acounts = array();
+    foreach($form_state['values']['parent'] as $key => $value) {
+       // print_r(taxonomy_get_parents_all($value)); echo '</br>';
+        $count = count((array)taxonomy_get_parents_all($value));
+        $array_acounts[] = $count;
+    }
+    //print_r($array_acounts);
+    foreach($array_acounts as $key => $count_value) {
+        if($count_value >= 2) {
+            $validate = FALSE; break;
+        }
+    }
+    if(!$validate) {
+        form_set_error('depth', 'Verify depth of your domain!');
+    }
+
+}

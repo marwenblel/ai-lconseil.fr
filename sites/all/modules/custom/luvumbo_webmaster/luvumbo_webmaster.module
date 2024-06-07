@@ -1,0 +1,56 @@
+<?php
+
+
+/**
+ * Implements luvumbo_hr_consultant_url_inbound_alter().
+ * DO1: redirect webmaster/company/manage/add path to admin/structure/taxonomy/company/add path.
+ **/
+function luvumbo_webmaster_url_inbound_alter(&$path, $original_path, $path_language) {
+    global $user;
+
+    if (in_array('webmaster', $user->roles)) {
+        if ($path == 'admin/appearance') {
+            $path = 'admin/appearance/settings/luvumbo';
+        }
+    }
+}
+
+/**
+ * @param $page
+ *
+ * Implements hook_page_alter().
+ */
+function luvumbo_webmaster_page_alter(&$page) {
+    global $user;
+
+    if (in_array('webmaster', $user->roles)) {
+        if (isset($page['page_top']['toolbar'])) {
+            $page['page_top']['toolbar']['#pre_render'][] = '_toolbar_webmaster_pre_render';
+        }
+    }
+}
+
+/**
+ * @param $toolbar
+ * @return mixed
+ *
+ * Implements _toolbar_webmaster_pre_render function.
+ */
+function _toolbar_webmaster_pre_render($toolbar) {
+    global $user;
+
+
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t('Menu principale Luvumbo'),
+        'href'  => 'admin/structure/menu/manage/luvumbo-main-menu');
+
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t('Quick Menu Luvumbo'),
+        'href'  => 'admin/structure/menu/manage/luvumbo-quick-menu');
+
+    $toolbar['toolbar_menu']['#links'][] = array(
+        'title' => t('Popular Menu Quick Menu'),
+        'href'  => 'admin/structure/menu/manage/luvumbo-popular-menu');
+
+    return $toolbar;
+}

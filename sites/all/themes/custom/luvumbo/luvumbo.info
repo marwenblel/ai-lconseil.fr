@@ -1,0 +1,141 @@
+name = Luvumbo
+description = Luvumbo conseil's theme.
+package = Custom
+version = 1.0
+core = 7.x
+
+;Customized Bootstrap Stylesheet
+stylesheets[all][] = css/bootstrap.min.css
+;Template Stylesheet
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/luvumbo.css
+
+;Libraries Stylesheet
+stylesheets[all][] = lib/owlcarousel/assets/owl.carousel.min.css
+stylesheets[all][] = lib/animate/animate.min.css
+
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[featured] = Featured
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[triptych_first] = Triptych first
+regions[triptych_middle] = Triptych middle
+regions[triptych_last] = Triptych last
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
+
+
+settings[luvumbo_map_marker] = 123 Street, New York, USA
+settings[luvumbo_phone] = +012 345 6789
+settings[luvumbo_email] = info@luvumbo.conseil.dev
+
+
+settings[luvumbo_twitter]   = https://twitter.com/luvumbo.conseil
+settings[luvumbo_facebook]  = https://facebook.com/luvumbo.conseil
+settings[luvumbo_linkedin]  = https://linkedin.com/luvumbo.conseil
+settings[luvumbo_instagram] = https://instagram.com/luvumbo.conseil
+settings[luvumbo_youtube]   = https://youtube.com/luvumbo.conseil
+
+
+settings[luvumbo_googleapis]          = https://fonts.googleapis.com
+settings[luvumbo_gstatic]             = https://fonts.gstatic.com
+settings[luvumbo_googleapis_family]   = https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap
+
+
+
+settings[luvumbo_font_awesome]     = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css
+settings[luvumbo_bootstrap_icons]  = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css
+
+
+settings[luvumbo_carousel_img1]     = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/carousel/carousel-1.jpg
+settings[luvumbo_carousel_img2]     = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/carousel/carousel-2.jpg
+
+;settings[luvumbo_jquery_lib]  = https://code.jquery.com/jquery-3.4.1.min.js
+;settings[luvumbo_jquery_lib]  = https://code.jquery.com/jquery-1.5.min.js
+settings[luvumbo_bootstrap_lib]       = https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js
+
+
+
+settings[luvumbo_wow_lib]         = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/lib/wow/wow.min.js
+settings[luvumbo_easing_lib]      = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/lib/easing/easing.min.js
+settings[luvumbo_waypoints_lib]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/lib/waypoints/waypoints.min.js
+settings[luvumbo_counterup_lib]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/lib/counterup/counterup.min.js
+settings[luvumbo_owlcarousel_lib] = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/lib/owlcarousel/owl.carousel.min.js
+settings[luvumbo_main_lib]        = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/js/main.js
+
+
+
+settings[luvumbo_logo1]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/logo-1.png
+settings[luvumbo_logo2]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/logo-2.png
+
+
+settings[luvumbo_blog1]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/blog-1.jpg
+settings[luvumbo_blog2]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/blog-2.jpg
+settings[luvumbo_blog3]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/blog-3.jpg
+
+settings[luvumbo_team1]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/team-1.jpg
+settings[luvumbo_team2]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/team-2.jpg
+settings[luvumbo_team3]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/team-3.jpg
+
+
+settings[luvumbo_testimonial1]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/testimonial-1.jpg
+settings[luvumbo_testimonial2]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/testimonial-2.jpg
+settings[luvumbo_testimonial3]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/testimonial-3.jpg
+settings[luvumbo_testimonial4]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/testimonial-4.jpg
+
+
+
+settings[luvumbo_vendor1]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-1.jpg
+settings[luvumbo_vendor2]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-2.jpg
+settings[luvumbo_vendor3]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-3.jpg
+settings[luvumbo_vendor4]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-4.jpg
+settings[luvumbo_vendor5]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-5.jpg
+settings[luvumbo_vendor6]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-6.jpg
+settings[luvumbo_vendor7]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-7.jpg
+settings[luvumbo_vendor8]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-8.jpg
+settings[luvumbo_vendor9]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/vendor-9.jpg
+
+settings[luvumbo_about_img]   = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/about.jpg
+settings[luvumbo_feature_img] = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/feature.jpg
+
+
+settings[luvumbo_main_menu]   = <div></div>
+
+settings[luvumbo_snipper]   = 1
+
+
+settings[luvumbo_carousel1_title]   = TITLE1
+settings[luvumbo_carousel1_text]    = TEXT1
+settings[luvumbo_carousel1_img]     = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/carousel/carousel-1.jpg
+settings[luvumbo_carousel2_title]   = TITLE2
+settings[luvumbo_carousel2_text]    = TEXT2
+settings[luvumbo_carousel2_img]     = https://ai-lconseil.fr/sites/all/themes/custom/luvumbo/img/carousel/carousel-2.jpg
+
+
+settings[luvumbo_happy_clients]  = 1236
+settings[luvumbo_projects_done]  = 1325
+settings[luvumbo_win_awards]     = 12
+
+
+settings[luvumbo_menus_main]    = luvumbo-main-menu
+settings[luvumbo_menus_quick]   = luvumbo-quick-menu
+settings[luvumbo_menus_popular] = luvumbo-popular-menu
+
+
+settings[luvumbo_sign_up_text] = Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.
+
+
+settings[luvumbo_about_us_title] = The Best IT Solution With 10 Years of Experience
+settings[luvumbo_about_us_text] = Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet

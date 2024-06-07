@@ -1,0 +1,65 @@
+<?php
+/**
+ * Implements hook_menu_alter().
+ **/
+
+function luvumbo_anonymous_menu_alter(&$items) {
+  unset($items['user/register']);
+  unset($items['user/password']);
+}
+
+
+function luvumbo_anonymous_form_alter(&$form, &$form_state, $form_id) {
+    global $user;
+
+    if (in_array('anonymous user', $user->roles)) {
+
+          //echo $form_id;
+		  if($form_id == "job_post_node_form") {
+			 // echo 'here';
+			 drupal_add_js(drupal_get_path('module', 'luvumbo_anonymous').'/js/my_module.js');
+
+
+              $nid = (int)substr($_GET['q'], 18, strlen($_GET['q']));
+              //echo $nid;
+
+              if($nid == 0){
+				  $form['field_job_id']['und']['#default_value'] = array(0 => '_none');
+			  } else {
+				  $form['field_job_id']['und']['#default_value'] = array(0 => $nid);
+				  
+			  }
+
+
+		  }
+
+    }
+}
+
+/**
+ * Implements luvumbo_hr_consultant_url_inbound_alter().
+ * DO1: redirect webmaster/company/manage/add path to admin/structure/taxonomy/company/add path.
+ **/
+function luvumbo_anonymous_url_inbound_alter(&$path, $original_path, $path_language) {
+    global $user;
+
+    if (in_array('anonymous user', $user->roles)) {
+        if (($path == 'user/register') OR ($path == 'user/password')OR ($path == 'user/login')OR ($path == 'user')) {
+            $path = '404';
+        }
+        if (($path == 'luvumbo/user')) {
+            $path = 'user/login';
+        }
+    }
+}
+
+function luvumbo_anonymous_node_view($node, $view_mode, $langcode) {
+	
+	if($node->type == "job_offer") {
+		       //echo 'debut';
+			  //drupal_add_js(drupal_get_path('module', 'luvumbo_anonymous').'/js/my_module.js');
+			  //echo 'fin';
+	}
+
+
+}

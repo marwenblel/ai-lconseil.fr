@@ -1,0 +1,6 @@
+name = Luvumbo Job offer
+description = Implements specifics back-end functionnalities related to Job Offer content type.
+package = Custom
+version = VERSION
+core = 7.x
+files[] = luvumbo_job_offer.module

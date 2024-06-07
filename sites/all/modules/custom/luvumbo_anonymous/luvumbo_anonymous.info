@@ -1,0 +1,6 @@
+name = Luvumbo Anonymous
+description = Implements specifics back-end functionnalities related to Anonymous role.
+package = Custom
+version = VERSION
+core = 7.x
+files[] = luvumbo_anonymous.module

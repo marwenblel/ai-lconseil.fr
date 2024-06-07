@@ -1,0 +1,6 @@
+name = Luvumbo Webmaster
+description = Implements specifics back-end functionnalities related to Webmaster role.
+package = Custom
+version = VERSION
+core = 7.x
+files[] = luvumbo_webmaster.module
